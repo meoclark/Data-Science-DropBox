@@ -1,0 +1,20 @@
+Generating Text with Deep Learning Review
+Congrats! You’ve successfully built a machine translation program using deep learning with Tensorflow’s Keras API.
+
+While the translation output may not have been quite what you expected, this is just the beginning. There are many ways you can improve this program on your own device by using a larger data set, increasing the size of the model, and adding more epochs for training.
+
+You could also convert the one-hot vectors into word embeddings during training to improve the model. Using embeddings of words rather than one-hot vectors would help the model capture that semantically similar words might have semantically similar embeddings (helping the LSTM generalize).
+
+You’ve learned quite a bit, even beyond the Keras implementation:
+
+seq2seq models are deep learning models that use recurrent neural networks like LSTMs to generate output.
+In machine translation, seq2seq networks encompass two main parts:
+The encoder accepts language as input and outputs state vectors.
+The decoder accepts the encoder’s final state and outputs possible translations.
+Teacher forcing is a method we can use to train seq2seq decoders.
+We need to mark the beginning and end of target sentences so that the decoder knows what to expect at the beginning and end of sentences.
+One-hot vectors are a way to represent a given word in a set of words wherein we use 1 to indicate the current word and 0 to indicate every other word.
+Timesteps help us keep track of where we are in a sentence.
+We can adjust batch size, which determines how many sentences we give a model at a time.
+We can also tweak dimensionality and number of epochs, which can improve results with careful tuning.
+The Softmax function converts the output of the LSTMs into a probability distribution over words in our vocabulary.
